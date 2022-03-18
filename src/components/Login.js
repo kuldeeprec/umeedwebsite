@@ -40,7 +40,7 @@ class Login extends Component {
     const { error, inProgress, isLoggedin } = this.props.auth;
 
     if (isLoggedin) {
-      return <Redirect to="/" />;
+      return <Redirect to="/student-info" />;
     }
     return (
       <div className="body">

@@ -1,4 +1,7 @@
 export const UPDATE_POSTS = "UPDATE_POSTS";
+export const FETCH_START = "FETCH_START";
+export const FETCH_FAILED = "FETCH_FAILED";
+export const CLEAR_FETCH_STATE = "CLEAR_FETCH_STATE";
 export const STUDENT_DATA = "STUDENT_DATA";
 
 // login action types

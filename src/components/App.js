@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import jwt_decode from "jwt-decode";
 import { authenticateUser } from "../actions/auth";
+
 import {
   BrowserRouter as Router,
   Link,
@@ -11,13 +12,19 @@ import {
 } from "react-router-dom";
 import { Home, Login, About, Studenterp } from "./";
 const PrivateRoute = (privateRouteProps) => {
-  const { isLoggedin, path, component: Component } = privateRouteProps;
+  const { isLoggedin, path, component: Component, auth } = privateRouteProps;
 
   return (
     <Route
+      exact={true}
       path={path}
       render={(props) => {
-        return isLoggedin ? <Component {...props} /> : <Redirect to="/login" />;
+        // console.log(props);
+        return isLoggedin ? (
+          <Component {...props} auth={auth} />
+        ) : (
+          <Redirect to="/login" />
+        );
       }}
     />
   );
@@ -42,7 +49,6 @@ class App extends React.Component {
   }
   render() {
     const { auth } = this.props;
-    console.log(auth);
     return (
       <div>
         <Router>
@@ -56,7 +62,13 @@ class App extends React.Component {
             />
             <Route exact={true} path="/login" component={Login} />
             <Route exact={true} path="/about" component={About} />
-            <Route exact={true} path="/student-info" component={Studenterp} />
+            {/* <Route exact={true} path="/student-info" component={Studenterp} /> */}
+            <PrivateRoute
+              path="/student-info"
+              component={Studenterp}
+              isLoggedin={auth.isLoggedin}
+              auth={auth}
+            />
           </Switch>
         </Router>
       </div>

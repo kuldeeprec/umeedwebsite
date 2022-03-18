@@ -1,32 +1,18 @@
 import React, { Component } from "react";
-// import "./About.css";
+import "./About.css";
 class About extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      show: false,
-    };
-  }
-
-  handleclick = (e) => {
-    e.preventDefault();
-    this.setState({
-      show: true,
-    });
-  };
-
   render() {
     return (
       <div>
-        <div class="section">
-          <div class="container" align="row-wise">
-            <div class="content-section">
-              <div class="image-section">
-                <img
+        <div class="sectiona">
+          <div class="containera" align="row-wise">
+            <div class="content-sectiona">
+              <div class="image-sectiona">
+                {/* <img
                   src="Screenshot 2022-02-22 114623.png"
                   alt="Snow"
                   style="width:100%"
-                />
+                /> */}
                 <div class="centered1">A MISSION</div>
                 <div class="centered2">WITH A VISION</div>
                 <div class="centered3">educating childs since 2015</div>
@@ -57,22 +43,19 @@ class About extends Component {
                     takes to save the children.
                   </span>
                 </p>
-                <button onclick={this.handleclick} id="myBtn">
-                  {" "}
-                  Read More{" "}
-                </button>
+                {}
               </div>
             </div>
-            <div class="div1">
+            <div class="diva1">
               <h3>Every child receives basic quality education</h3>
             </div>
-            <div class="div2">
+            <div class="diva2">
               <h3>
                 Education is the most powerful weaopen You can use to change the
                 World
               </h3>
             </div>
-            <div class="div3">
+            <div class="diva3">
               <h3>
                 Build a world in which every child has the right to survival,
                 protection, development, and participation
@@ -80,7 +63,9 @@ class About extends Component {
             </div>
           </div>
         </div>
-        <a href="#">Back to Top</a>
+        <a className="about-a" href="/">
+          Back to Top
+        </a>
       </div>
     );
   }

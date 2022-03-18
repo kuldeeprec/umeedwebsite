@@ -7,7 +7,6 @@ import { GrMail } from "react-icons/gr";
 import "./Footer.css";
 class Footer extends Component {
   render() {
-    const { auth } = this.props;
     return (
       <>
         <div className="footer-container">
@@ -61,7 +60,6 @@ class Footer extends Component {
           <div className="footer-copyright">
             © Copyright Umeed, Designed and Maintained UmeedTeam. <br />
             All rights reserved | Terms & Conditions | Privacy Policy |
-            {auth.user.name}
           </div>
         </div>
       </>

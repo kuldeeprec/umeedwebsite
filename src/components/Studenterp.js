@@ -1,15 +1,45 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Redirect } from "react-router-dom";
 import "./Studenterp.css";
+import { logoutUser } from "../actions/auth";
+import { fetchStudent, clearFetchState } from "../actions/student";
 class Studenterp extends Component {
+  logOut = () => {
+    localStorage.removeItem("token");
+    this.props.dispatch(logoutUser());
+    console.log("hi");
+  };
+  componentWillUnmount() {
+    this.props.dispatch(clearFetchState());
+  }
+  componentDidMount() {
+    const { auth } = this.props;
+
+    this.props.dispatch(fetchStudent(auth.user.userId));
+  }
   render() {
-    const { student } = this.props;
-    console.log(student);
+    const { auth, student } = this.props;
+    const { inProgress, isStudent } = student;
+    console.log(isStudent);
+
+    if (!auth.isLoggedin) {
+      return <Redirect to="/" />;
+    }
+    if (!student) {
+      return <Redirect to="/" />;
+    }
+
     return (
       <div>
         <div class="cont1">
           <div class="title1">
             <h2>My Profile</h2>
+            {auth.isLoggedin && (
+              <button className="student-logout" onClick={this.logOut}>
+                logout
+              </button>
+            )}
           </div>
           <div class="home">
             <a href="#">Go to Home</a>
@@ -21,19 +51,19 @@ class Studenterp extends Component {
                 <table>
                   <tr>
                     <td>Name</td>
-                    <td>Sanjay Yadav</td>
+                    <td>{student.student.name}</td>
                   </tr>
                   <tr>
                     <td>Father's Name</td>
-                    <td>R S Yadav</td>
+                    <td>{student.student.fatherName}</td>
                   </tr>
                   <tr>
                     <td>Mother's Name</td>
-                    <td>Asha Yadav</td>
+                    <td>{student.student.motherName}</td>
                   </tr>
                   <tr>
                     <td>Gender</td>
-                    <td>Male</td>
+                    <td>{student.student.gender}</td>
                   </tr>
                   <tr>
                     <td>Date of Birth(DOB)</td>
@@ -45,7 +75,7 @@ class Studenterp extends Component {
                   </tr>
                   <tr>
                     <td>Admission Session</td>
-                    <td>2019-2020</td>
+                    <td>{student.student.admissionDate}</td>
                   </tr>
                   <tr>
                     <td>Academic Status</td>
@@ -61,11 +91,11 @@ class Studenterp extends Component {
                   </tr>
                   <tr>
                     <td>Mobile No.</td>
-                    <td>7388797731</td>
+                    <td>{student.student.mobile}</td>
                   </tr>
                   <tr>
                     <td>Email Id</td>
-                    <td>sanjayyadav.sbd@gmail.com</td>
+                    <td>{student.student.email}</td>
                   </tr>
                   <tr>
                     <td>Corresponding Address</td>

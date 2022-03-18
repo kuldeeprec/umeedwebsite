@@ -3,7 +3,7 @@ import "./Navbar.css";
 
 import { BiHomeCircle, BiDonateHeart } from "react-icons/bi";
 import { AiOutlineInsertRowAbove } from "react-icons/ai";
-
+import { Link } from "react-router-dom";
 import { RiAdminFill } from "react-icons/ri";
 import { HiOutlineAcademicCap, HiOutlineMail } from "react-icons/hi";
 import { FaServicestack } from "react-icons/fa";
@@ -18,13 +18,13 @@ class NavBar extends Component {
       <>
         <div className="header">
           <div className="u-logo-and-u-name">
-            <a href="/" className="logo-display">
+            <Link to="/" className="logo-display">
               <img
                 className="logo-display"
                 src="../../assets/img/u-logo1.jpeg"
                 alt="logo is not display"
               />
-            </a>
+            </Link>
 
             <div className="u-name">
               <span style={{ display: "block" }}>
@@ -34,158 +34,158 @@ class NavBar extends Component {
             </div>
           </div>
           <div className="c-logo">
-            <a href="/" className="logo-display">
+            <Link to="/" className="logo-display">
               <img
                 className="picture"
                 src="../../assets/img/college logo.jfif"
                 alt="logo is not display"
               />
-            </a>
+            </Link>
           </div>
         </div>
         <div className="navbar-header">
           <li className="first leaf">
-            <a href="/">
+            <Link to="/about">
               <span className="icon">
                 <BiHomeCircle />
               </span>
 
               <span>home</span>
-            </a>
+            </Link>
           </li>
           <li className="leaf">
-            <a href="/">
+            <Link to="/about">
               <span className="icon">
                 <RiAdminFill />
               </span>
               <span>Admin</span>
-            </a>
+            </Link>
             <ul className="expanded">
-              <a href="/">
+              <Link to="/about">
                 <li className="expanded-item">fist</li>
-              </a>
-              <a href="/">
+              </Link>
+              <Link to="/about">
                 <li className="expanded-item">second</li>
-              </a>
-              <a href="/">
+              </Link>
+              <Link to="/about">
                 <li className="expanded-item">third</li>
-              </a>
-              <a href="/">
+              </Link>
+              <Link to="/about">
                 <li className="expanded-item">forth</li>
-              </a>
+              </Link>
             </ul>
           </li>
           <li className="leaf">
-            <a href="/">
+            <Link to="/about">
               <span className="icon">
                 <HiOutlineAcademicCap />
               </span>
               <span>Academics</span>
-            </a>
+            </Link>
             <ul className="expanded">
-              <a href="/">
+              <Link to="/about">
                 <li className="expanded-item">fist</li>
-              </a>
-              <a href="/">
+              </Link>
+              <Link to="/about">
                 <li className="expanded-item">second</li>
-              </a>
-              <a href="/">
+              </Link>
+              <Link to="/about">
                 <li className="expanded-item">third</li>
-              </a>
-              <a href="/">
+              </Link>
+              <Link to="/about">
                 <li className="expanded-item">forth</li>
-              </a>
+              </Link>
             </ul>
           </li>
           <li className="leaf">
-            <a href="/">
+            <Link to="/about">
               <span className="icon">
                 <FaServicestack />
               </span>
               <span>Facilites</span>
-            </a>
+            </Link>
             <ul className="expanded">
-              <a href="/">
+              <Link to="/about">
                 <li className="expanded-item">fist</li>
-              </a>
-              <a href="/">
+              </Link>
+              <Link to="/about">
                 <li className="expanded-item">second</li>
-              </a>
-              <a href="/">
+              </Link>
+              <Link to="/about">
                 <li className="expanded-item">third</li>
-              </a>
-              <a href="/">
+              </Link>
+              <Link to="/about">
                 <li className="expanded-item">forth</li>
-              </a>
+              </Link>
             </ul>
           </li>
           <li className="leaf">
-            <a href="/">
+            <Link to="/about">
               <span className="icon">
                 <MdPermMedia />
               </span>
               <span>Gallery</span>
-            </a>
+            </Link>
             <ul className="expanded">
-              <a href="/">
+              <Link to="/about">
                 <li className="expanded-item">fist</li>
-              </a>
-              <a href="/">
+              </Link>
+              <Link to="/about">
                 <li className="expanded-item">second</li>
-              </a>
-              <a href="/">
+              </Link>
+              <Link to="/about">
                 <li className="expanded-item">third</li>
-              </a>
-              <a href="/">
+              </Link>
+              <Link to="/about">
                 <li className="expanded-item">forth</li>
-              </a>
+              </Link>
             </ul>
           </li>
           <li className="leaf">
-            <a href="/">
+            <Link to="/about">
               <span className="icon">
                 <GiNewspaper />
               </span>
               <span>Media</span>
-            </a>
+            </Link>
             <ul className="expanded">
-              <a href="/">
+              <Link to="/about">
                 <li className="expanded-item">fist</li>
-              </a>
-              <a href="/">
+              </Link>
+              <Link to="/about">
                 <li className="expanded-item">second</li>
-              </a>
-              <a href="/">
+              </Link>
+              <Link to="/about">
                 <li className="expanded-item">third</li>
-              </a>
-              <a>
+              </Link>
+              <Link to="/">
                 <li className="expanded-item">forth</li>
-              </a>
+              </Link>
             </ul>
           </li>
           <li className="leaf">
-            <a href="/">
+            <Link to="/about">
               <span className="icon">
                 <BiDonateHeart />
               </span>
               <span>Donation</span>
-            </a>
+            </Link>
           </li>
           <li className="leaf">
-            <a href="/">
+            <Link to="/about">
               <span className="icon">
                 <HiOutlineMail />
               </span>
               <span>ConntactUs</span>
-            </a>
+            </Link>
           </li>
           <li className="leaf">
-            <a href="/">
+            <Link to="/about">
               <span className="icon">
                 <AiOutlineInsertRowAbove />
               </span>
               <span>AboutUs</span>
-            </a>
+            </Link>
           </li>
         </div>
       </>
