@@ -6,10 +6,8 @@ import {
 } from "./actionTypes";
 import { APIUrls } from "../helpers/urls";
 import { getFormBody } from "../helpers/utils";
-const token = localStorage.getItem("token");
-console.log(token);
+
 export function fetchStart() {
-  console.log(token);
   return {
     type: FETCH_START,
   };
@@ -29,6 +27,8 @@ export function fetchSuccess(student) {
   };
 }
 export function fetchStudent(rollno) {
+  let token = localStorage.getItem("token");
+  console.log(token);
   return (dispatch) => {
     dispatch(fetchStart());
     const url = APIUrls.fetchStudent(rollno);

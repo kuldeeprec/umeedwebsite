@@ -16,6 +16,7 @@ export default function student(state = initialAuthState, action) {
       return {
         ...state,
         isStudent: false,
+        student: {},
         error: null,
       };
     case FETCH_START:

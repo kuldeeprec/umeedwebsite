@@ -1,0 +1,58 @@
+.aboutumeed-container {
+  margin: 0 rem 0 rem;
+}
+.academics-link {
+  color: red;
+}
+.aboutumeed-container {
+  margin-top: 0rem !important;
+  padding: 5rem 3rem !important;
+  background-color: rgb(221, 206, 206);
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.aboutumeed-container h1 {
+  font-size: 3rem;
+  padding: 1rem !important;
+  font-weight: bold;
+  margin-top: 0rem;
+  color: #e22283;
+}
+.aboutumeed-container p {
+  font-size: 1rem;
+  color: #333333;
+  font-weight: bold;
+}
+.aboutumeed-container .box-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.aboutumeed-container .box-container .card {
+  width: 12%;
+  /* height: 197px; */
+  background-color: rgb(221, 206, 206);
+  align-items: space-between;
+  justify-content: space-between;
+}
+.aboutumeed-container .box-container .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill !important;
+  /* border-radius: 2%; */
+}
+.aboutumeed-container .box-container .card b {
+  color: #e22283;
+}
+.about-card-container-title {
+  font-size: 0.5rem;
+  margin-bottom: 0;
+}
+@media (max-width: 540px) {
+  .aboutumeed-container {
+    padding: 5rem 1rem !important;
+  }
+}

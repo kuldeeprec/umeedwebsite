@@ -7,28 +7,32 @@ import { fetchStudent, clearFetchState } from "../actions/student";
 class Studenterp extends Component {
   logOut = () => {
     localStorage.removeItem("token");
+    let token = localStorage.getItem("token");
+    console.log(token);
     this.props.dispatch(logoutUser());
+    this.props.dispatch(clearFetchState());
     console.log("hi");
   };
+  componentDidMount() {
+    const { auth } = this.props;
+    console.log(auth);
+    this.props.dispatch(fetchStudent(auth.user.userId));
+  }
   componentWillUnmount() {
     this.props.dispatch(clearFetchState());
   }
-  componentDidMount() {
-    const { auth } = this.props;
 
-    this.props.dispatch(fetchStudent(auth.user.userId));
-  }
   render() {
     const { auth, student } = this.props;
-    const { inProgress, isStudent } = student;
-    console.log(isStudent);
+
+    console.log(student.isStudent);
 
     if (!auth.isLoggedin) {
       return <Redirect to="/" />;
     }
-    if (!student) {
-      return <Redirect to="/" />;
-    }
+    // if (!student.isStudent) {
+    //   return <Redirect to="/" />;
+    // }
 
     return (
       <div>
@@ -42,7 +46,7 @@ class Studenterp extends Component {
             )}
           </div>
           <div class="home">
-            <a href="#">Go to Home</a>
+            <a href="/">Go to Home</a>
           </div>
           <div class="title2">
             <h3>My Information</h3>
@@ -67,27 +71,19 @@ class Studenterp extends Component {
                   </tr>
                   <tr>
                     <td>Date of Birth(DOB)</td>
-                    <td>15/02/2001</td>
-                  </tr>
-                  <tr>
-                    <td>Blood Group</td>
-                    <td>AB</td>
+                    <td>{student.student.dateofbirth}</td>
                   </tr>
                   <tr>
                     <td>Admission Session</td>
                     <td>{student.student.admissionDate}</td>
                   </tr>
                   <tr>
-                    <td>Academic Status</td>
-                    <td>Regular</td>
-                  </tr>
-                  <tr>
-                    <td>School's Name</td>
-                    <td>The Sun Shine Senior Secondary School</td>
+                    <td> Organization Name</td>
+                    <td>Umeed Rec Sonbhadra</td>
                   </tr>
                   <tr>
                     <td>Class</td>
-                    <td>9th</td>
+                    <td>{student.student.class}</td>
                   </tr>
                   <tr>
                     <td>Mobile No.</td>
@@ -99,23 +95,23 @@ class Studenterp extends Component {
                   </tr>
                   <tr>
                     <td>Corresponding Address</td>
-                    <td>VILL -MUBARAKPUR HARTARA POST-BAHARIABAD</td>
+                    <td>{student.student.addressName}</td>
                   </tr>
                   <tr>
                     <td>District/City</td>
-                    <td>Ghazipur</td>
+                    <td>{student.student.city}</td>
                   </tr>
                   <tr>
                     <td>State</td>
-                    <td>Uttar Pradesh</td>
+                    <td>{student.student.state}</td>
                   </tr>
                   <tr>
                     <td>Country</td>
-                    <td>India</td>
+                    <td>{student.student.country}</td>
                   </tr>
                   <tr>
                     <td>Pincode</td>
-                    <td>275204</td>
+                    <td>{student.student.pincode}</td>
                   </tr>
                 </table>
               </div>
@@ -123,22 +119,26 @@ class Studenterp extends Component {
                 <table>
                   <tr>
                     <th>
-                      <h3>Roll NO.: 12345</h3>
+                      <h3>Roll NO.: {auth.user.userId}</h3>
                     </th>
                   </tr>
                   <tr>
                     <th>
-                      <h3>Enrollment NO.: 12345</h3>
+                      <h3>Enrollment NO.: </h3>
                     </th>
                   </tr>
                   <tr>
                     <th>
                       <img
-                        src="passport_picture_1545891480_486040.jpg"
+                        className="profile-photo"
+                        src={
+                          process.env.PUBLIC_URL +
+                          `/student/${student.student.avatar}`
+                        }
                         alt="Photograph"
                       />
                       <br />
-                      <p>Photograph</p>
+                      <p className="profile-photo">Photograph</p>
                     </th>
                   </tr>
                 </table>

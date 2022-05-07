@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavBar, Noticebar, Slider, Footer } from "./";
+import { NavBar, Noticebar, Slider, Footer, Gallery, Aboutumeed } from "./";
 class Home extends Component {
   render() {
     const { auth } = this.props;
@@ -8,7 +8,9 @@ class Home extends Component {
       <>
         <NavBar />
         <Slider />
+        <Aboutumeed />
         <Noticebar />
+        <Gallery />
         <Footer auth={auth} />
       </>
     );

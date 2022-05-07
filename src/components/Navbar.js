@@ -45,7 +45,7 @@ class NavBar extends Component {
         </div>
         <div className="navbar-header">
           <li className="first leaf">
-            <Link to="/about">
+            <Link to="/">
               <span className="icon">
                 <BiHomeCircle />
               </span>
@@ -58,20 +58,17 @@ class NavBar extends Component {
               <span className="icon">
                 <RiAdminFill />
               </span>
-              <span>Admin</span>
+              <span>Login</span>
             </Link>
             <ul className="expanded">
-              <Link to="/about">
-                <li className="expanded-item">fist</li>
+              <Link to="/admin">
+                <li className="expanded-item">Administrator</li>
               </Link>
-              <Link to="/about">
-                <li className="expanded-item">second</li>
+              <Link to="/educator/umeed">
+                <li className="expanded-item">Educator</li>
               </Link>
-              <Link to="/about">
-                <li className="expanded-item">third</li>
-              </Link>
-              <Link to="/about">
-                <li className="expanded-item">forth</li>
+              <Link to="/login">
+                <li className="expanded-item">Student</li>
               </Link>
             </ul>
           </li>
@@ -83,17 +80,17 @@ class NavBar extends Component {
               <span>Academics</span>
             </Link>
             <ul className="expanded">
-              <Link to="/about">
-                <li className="expanded-item">fist</li>
+              <Link to="/academics/class9">
+                <li className="expanded-item">Class 9</li>
               </Link>
-              <Link to="/about">
-                <li className="expanded-item">second</li>
+              <Link to="/academics/class9">
+                <li className="expanded-item">Class 10</li>
               </Link>
-              <Link to="/about">
-                <li className="expanded-item">third</li>
+              <Link to="/academics/class9">
+                <li className="expanded-item">Class 11</li>
               </Link>
-              <Link to="/about">
-                <li className="expanded-item">forth</li>
+              <Link to="/academics/class9">
+                <li className="expanded-item">Class 12</li>
               </Link>
             </ul>
           </li>
@@ -106,16 +103,16 @@ class NavBar extends Component {
             </Link>
             <ul className="expanded">
               <Link to="/about">
-                <li className="expanded-item">fist</li>
+                <li className="expanded-item">Jee main</li>
               </Link>
               <Link to="/about">
-                <li className="expanded-item">second</li>
+                <li className="expanded-item">Navoda</li>
               </Link>
               <Link to="/about">
-                <li className="expanded-item">third</li>
+                <li className="expanded-item">CHS</li>
               </Link>
               <Link to="/about">
-                <li className="expanded-item">forth</li>
+                <li className="expanded-item">Polytechnic</li>
               </Link>
             </ul>
           </li>
@@ -128,16 +125,16 @@ class NavBar extends Component {
             </Link>
             <ul className="expanded">
               <Link to="/about">
-                <li className="expanded-item">fist</li>
+                <li className="expanded-item">Umeed Day</li>
               </Link>
               <Link to="/about">
-                <li className="expanded-item">second</li>
+                <li className="expanded-item">15 August</li>
               </Link>
               <Link to="/about">
-                <li className="expanded-item">third</li>
+                <li className="expanded-item">26 January</li>
               </Link>
               <Link to="/about">
-                <li className="expanded-item">forth</li>
+                <li className="expanded-item">25 December</li>
               </Link>
             </ul>
           </li>

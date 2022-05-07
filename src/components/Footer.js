@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { Link } from "react-router-dom";
 import { BsFacebook, BsLinkedin, BsInstagram, BsYoutube } from "react-icons/bs";
 import { ImLocation2 } from "react-icons/im";
 import { IoMdCall } from "react-icons/io";
@@ -35,26 +35,47 @@ class Footer extends Component {
             </div>
             <div className="footer-content link">
               <h2>FollowUs</h2>
-              <a href="/">
+              <Link
+                to={{ pathname: "https://www.facebook.com/umeedrecsonbhadra/" }}
+                target="_blank"
+              >
                 <span className="icon">
                   <BsFacebook />
                 </span>
-              </a>
-              <a href="/">
+              </Link>
+              <Link
+                to={{
+                  pathname:
+                    "https://www.linkedin.com/company/recsonbhadraumeed/",
+                }}
+                target="_blank"
+              >
                 <span className="icon">
                   <BsLinkedin />
                 </span>
-              </a>
-              <a href="/">
+              </Link>
+              <Link
+                to={{
+                  pathname:
+                    "https://www.linkedin.com/company/recsonbhadraumeed/",
+                }}
+                target="_blank"
+              >
                 <span className="icon">
                   <BsInstagram />
                 </span>
-              </a>
-              <a href="/">
+              </Link>
+              <Link
+                to={{
+                  pathname:
+                    "https://www.youtube.com/channel/UC1wJjWPKh308oF6-eUveDig",
+                }}
+                target="_blank"
+              >
                 <span className="icon">
                   <BsYoutube />
                 </span>
-              </a>
+              </Link>
             </div>
           </div>
           <div className="footer-copyright">

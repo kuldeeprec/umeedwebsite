@@ -10,7 +10,7 @@ import {
   Switch,
   Redirect,
 } from "react-router-dom";
-import { Home, Login, About, Studenterp } from "./";
+import { Home, Login, About, Studenterp, Acedemics, Educator, Admin } from "./";
 const PrivateRoute = (privateRouteProps) => {
   const { isLoggedin, path, component: Component, auth } = privateRouteProps;
 
@@ -61,6 +61,13 @@ class App extends React.Component {
               }}
             />
             <Route exact={true} path="/login" component={Login} />
+            <Route exact={true} path="/admin" component={Admin} />
+            <Route exact={true} path="/educator/umeed" component={Educator} />
+            <Route
+              exact={true}
+              path="/academics/class9"
+              component={Acedemics}
+            />
             <Route exact={true} path="/about" component={About} />
             {/* <Route exact={true} path="/student-info" component={Studenterp} /> */}
             <PrivateRoute

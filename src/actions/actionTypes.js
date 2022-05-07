@@ -11,3 +11,6 @@ export const LOGIN_FAILED = "LOGIN_FAILED";
 export const AUTHENTICATE_USER = "AUTHENTICATE_USER";
 export const LOG_OUT = "LOG_OUT";
 export const CLEAR_AUTH_STATE = "CLEAR_AUTH_STATE";
+// EDUCATOR DATA
+export const EDUCATOR_DATA = "EDUCATOR_DATA";
+export const SET_BATCH = "SET_BATCH";
