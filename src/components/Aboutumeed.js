@@ -26,22 +26,28 @@ class Aboutumeed extends Component {
             cater to all deviant needs of our children .
           </p>
           <div class="box-container">
-            <div class="card">
-              <img src="imgs/Director..png" alt="Avatar" />
+            <div class="bcard-container">
+              <div class="card">
+                <img src="imgs/Director..png" alt="Avatar" />
+              </div>
               <div class="about-card-container">
                 <p class="about-card-container-title">
                   <b>Prof. Geetam Singh Tomar</b>
                 </p>
-                <p>Director REC, Sonbhadra</p>
+                <p>Director </p>
+                <p>Rajkiya Engineering college Sonbhadra</p>
               </div>
             </div>
-            <div class=" card">
-              <img src="imgs/headofumeed.jpg" alt="Avatar" />
+            <div class="bcard-container">
+              <div class="card">
+                <img src="imgs/headofumeed.jpg" alt="Avatar" />
+              </div>
               <div class="about-card-container">
                 <p class="about-card-container-title">
-                  <b>Dr. Ravi Prakash Tripathi</b>
+                  <b>Dr. Ravi Prakash Triphathi</b>
                 </p>
-                <p>Head Umeed REC, Sonbhadra</p>
+                <p>Mentor of Umeed</p>
+                <p>Rajkiya Engineering college Sonbhadra</p>
               </div>
             </div>
           </div>

@@ -7,27 +7,22 @@ import {
   BrowserRouter as Router,
   Link,
   Route,
-  Switch,
-  Redirect,
+  Routes,
+  Navigate,
+  Outlet,
 } from "react-router-dom";
 import { Home, Login, About, Studenterp, Acedemics, Educator, Admin } from "./";
+import {
+  Adminsidebar,
+  Ragistratonf,
+  AddTeacher,
+  StudentRagistraton,
+  PostNotification,
+  StudentweeklyMaterial,
+} from "./";
 const PrivateRoute = (privateRouteProps) => {
-  const { isLoggedin, path, component: Component, auth } = privateRouteProps;
-
-  return (
-    <Route
-      exact={true}
-      path={path}
-      render={(props) => {
-        // console.log(props);
-        return isLoggedin ? (
-          <Component {...props} auth={auth} />
-        ) : (
-          <Redirect to="/login" />
-        );
-      }}
-    />
-  );
+  const { isLoggedin } = privateRouteProps;
+  return isLoggedin ? <Outlet /> : <Navigate to="/login" />;
 };
 
 class App extends React.Component {
@@ -49,10 +44,11 @@ class App extends React.Component {
   }
   render() {
     const { auth } = this.props;
+
     return (
       <div>
         <Router>
-          <Switch>
+          {/* <Switch>
             <Route
               exact={true}
               path="/"
@@ -61,7 +57,7 @@ class App extends React.Component {
               }}
             />
             <Route exact={true} path="/login" component={Login} />
-            <Route exact={true} path="/admin" component={Admin} />
+            <Route path="/admin" component={Admin} />
             <Route exact={true} path="/educator/umeed" component={Educator} />
             <Route
               exact={true}
@@ -70,13 +66,39 @@ class App extends React.Component {
             />
             <Route exact={true} path="/about" component={About} />
             {/* <Route exact={true} path="/student-info" component={Studenterp} /> */}
-            <PrivateRoute
+          {/* <PrivateRoute
               path="/student-info"
               component={Studenterp}
               isLoggedin={auth.isLoggedin}
               auth={auth}
             />
-          </Switch>
+          </Switch> */}
+          <Routes>
+            <Route path="/" element={<Home auth={auth} />}></Route>
+            <Route path="login" element={<Login />} />
+            <Route exact={true} path="/educator/umeed" element={<Educator />} />
+            <Route
+              exact={true}
+              path="/academics/class9"
+              element={<Acedemics />}
+            />
+            <Route exact={true} path="/about" element={<About />} />
+
+            <Route
+              path="/student-info"
+              element={<PrivateRoute isLoggedin={auth.isLoggedin} />}
+            >
+              <Route
+                path=""
+                element={
+                  <Studenterp isLoggedin={auth.isLoggedin} auth={auth} />
+                }
+              />
+            </Route>
+            <Route path="/admin" element={<Admin />}>
+              <Route path="Ragister" />
+            </Route>
+          </Routes>
         </Router>
       </div>
     );

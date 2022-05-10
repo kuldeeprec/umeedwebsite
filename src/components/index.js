@@ -13,6 +13,11 @@ import Acedemics from "./Acedemics";
 import Educator from "./Educator";
 import Adminsidebar from "./Adminsidebar";
 import Admin from "./Admin";
+import Ragistratonf from "./Ragistratonf";
+import StudentRagistraton from "./StudentRagistraton";
+import AddTeacher from "./AddTeacher";
+import PostNotification from "./PostNotification";
+import StudentweeklyMaterial from "./StudentweeklyMaterial";
 export {
   NavBar,
   Noticebar,
@@ -29,4 +34,9 @@ export {
   Educator,
   Adminsidebar,
   Admin,
+  Ragistratonf,
+  StudentRagistraton,
+  AddTeacher,
+  PostNotification,
+  StudentweeklyMaterial,
 };

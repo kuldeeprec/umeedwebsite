@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Login.css";
-import { Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { connect } from "react-redux";
 import { login, clearAuthState } from "../actions/auth";
 class Login extends Component {
@@ -40,7 +40,7 @@ class Login extends Component {
     const { error, inProgress, isLoggedin } = this.props.auth;
 
     if (isLoggedin) {
-      return <Redirect to="/student-info" />;
+      return <Navigate to="/student-info" />;
     }
     return (
       <div className="body">

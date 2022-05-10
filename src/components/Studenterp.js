@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import "./Studenterp.css";
 import { logoutUser } from "../actions/auth";
 import { fetchStudent, clearFetchState } from "../actions/student";
@@ -28,7 +28,7 @@ class Studenterp extends Component {
     console.log(student.isStudent);
 
     if (!auth.isLoggedin) {
-      return <Redirect to="/" />;
+      return <Navigate to="/" />;
     }
     // if (!student.isStudent) {
     //   return <Redirect to="/" />;

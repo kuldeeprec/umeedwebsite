@@ -21,63 +21,63 @@ class Adminsidebar extends Component {
             <SubMenu icon={<MdAssignmentInd />} title="Ragister user">
               <MenuItem>
                 Ragister student
-                <Link to="/" />
+                <Link to="/admin/Ragister" />
               </MenuItem>
               <MenuItem>
                 Ragister educator
-                <Link to="/" />
+                <Link to="/admin/Ragister" />
               </MenuItem>
             </SubMenu>
             <SubMenu icon={<FaPeopleCarry />} title="Educator">
               <MenuItem>
                 Add educator
-                <Link to="/" />
+                <Link to="/admin/addteacher" />
               </MenuItem>
             </SubMenu>
             <SubMenu icon={<FcBusinessman />} title="Student">
               <MenuItem>
                 Add student
-                <Link to="/" />
+                <Link to="/admin/addstudent" />
               </MenuItem>
             </SubMenu>
             <SubMenu icon={<IoIosNotifications />} title="Notification">
               <MenuItem>
                 post Notification
-                <Link to="/" />
+                <Link to="/admin/postnotification" />
               </MenuItem>
             </SubMenu>
             <SubMenu icon={<MdOutlineContentPaste />} title="weekly content">
               <MenuItem>
                 class 9
-                <Link to="/" />
+                <Link to="/admin/studentcontent" />
               </MenuItem>
               <MenuItem>
                 class 10
-                <Link to="/" />
+                <Link to="/admin/studentcontent" />
               </MenuItem>
               <MenuItem>
                 class 11
-                <Link to="/" />
+                <Link to="/admin/studentcontent" />
               </MenuItem>
               <MenuItem>
                 class 12
-                <Link to="/" />
+                <Link to="/admin/studentcontent" />
               </MenuItem>
               <MenuItem>
                 jee mains
-                <Link to="/" />
+                <Link to="/admin/studentcontent" />
               </MenuItem>
               <MenuItem>
                 class JNV
-                <Link to="/" />
+                <Link to="/admin/studentcontent" />
               </MenuItem>
               <MenuItem>
                 class Navoda
-                <Link to="/" />
+                <Link to="/admin/studentcontent" />
               </MenuItem>
               <MenuItem>
                 CHS
-                <Link to="/" />
+                <Link to="/admin/studentcontent" />
               </MenuItem>
             </SubMenu>
           </Menu>
