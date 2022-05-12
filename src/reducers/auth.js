@@ -5,6 +5,9 @@ import {
   AUTHENTICATE_USER,
   LOG_OUT,
   CLEAR_AUTH_STATE,
+  RAGISTER_SUCCESS,
+  RAGISTER_FAILED,
+  RAGISTER_START,
 } from "../actions/actionTypes";
 
 const initialAuthState = {
@@ -51,6 +54,23 @@ export default function auth(state = initialAuthState, action) {
         ...state,
         user: {},
         isLoggedin: false,
+      };
+    case RAGISTER_START:
+      return {
+        ...state,
+        inProgress: true,
+      };
+    case RAGISTER_SUCCESS:
+      return {
+        ...state,
+        inProgress: false,
+        error: action.error,
+      };
+    case RAGISTER_FAILED:
+      return {
+        ...state,
+        inProgress: false,
+        error: action.error,
       };
     default:
       return state;

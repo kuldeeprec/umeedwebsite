@@ -9,15 +9,10 @@ import {
   PostNotification,
   StudentweeklyMaterial,
 } from "./";
-import {
-  BrowserRouter as Router,
-  Link,
-  Route,
-  Routes,
-  Redirect,
-} from "react-router-dom";
+
 class Admin extends Component {
   render() {
+    const MYcomponent = this.props.myComponent;
     return (
       <div id="page">
         <header>
@@ -29,31 +24,7 @@ class Admin extends Component {
           <Adminsidebar />
         </nav>
         <main>
-          <Ragistratonf />
-
-          {/* <Router>
-              <Route
-                exact={true}
-                path="/admin/addteacher"
-                component={AddTeacher}
-              />
-              <Route
-                exact={true}
-                path="/admin/addstudent"
-                component={StudentRagistraton}
-              />
-              <Route
-                exact={true}
-                path="/admin/postnotification"
-                component={PostNotification}
-              />
-              <Route
-                exact={true}
-                path="/admin/studentcontent"
-                component={StudentweeklyMaterial}
-              />
-            </Routes>
-          </Router> */}
+          <MYcomponent />
         </main>
       </div>
     );

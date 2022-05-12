@@ -14,3 +14,7 @@ export const CLEAR_AUTH_STATE = "CLEAR_AUTH_STATE";
 // EDUCATOR DATA
 export const EDUCATOR_DATA = "EDUCATOR_DATA";
 export const SET_BATCH = "SET_BATCH";
+//ragister User data
+export const RAGISTER_START = "RAGISTER_START";
+export const RAGISTER_FAILED = "RAGISTER_FAILED";
+export const RAGISTER_SUCCESS = "RAGISTER_SUCCESS";

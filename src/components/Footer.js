@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { ExternalLink } from "react-external-link";
 import { BsFacebook, BsLinkedin, BsInstagram, BsYoutube } from "react-icons/bs";
 import { ImLocation2 } from "react-icons/im";
 import { IoMdCall } from "react-icons/io";
@@ -35,47 +36,26 @@ class Footer extends Component {
             </div>
             <div className="footer-content link">
               <h2>FollowUs</h2>
-              <Link
-                to={{ pathname: "https://www.facebook.com/umeedrecsonbhadra/" }}
-                target="_blank"
-              >
+              <ExternalLink href="https://www.facebook.com/umeedrecsonbhadra/">
                 <span className="icon">
                   <BsFacebook />
                 </span>
-              </Link>
-              <Link
-                to={{
-                  pathname:
-                    "https://www.linkedin.com/company/recsonbhadraumeed/",
-                }}
-                target="_blank"
-              >
+              </ExternalLink>
+              <ExternalLink href="http://www.linkedin.com/company/recsonbhadraumeed/">
                 <span className="icon">
                   <BsLinkedin />
                 </span>
-              </Link>
-              <Link
-                to={{
-                  pathname:
-                    "https://www.linkedin.com/company/recsonbhadraumeed/",
-                }}
-                target="_blank"
-              >
+              </ExternalLink>
+              <ExternalLink href="https://www.linkedin.com/company/recsonbhadraumeed/">
                 <span className="icon">
                   <BsInstagram />
                 </span>
-              </Link>
-              <Link
-                to={{
-                  pathname:
-                    "https://www.youtube.com/channel/UC1wJjWPKh308oF6-eUveDig",
-                }}
-                target="_blank"
-              >
+              </ExternalLink>
+              <ExternalLink href="https://www.youtube.com/channel/UC1wJjWPKh308oF6-eUveDig">
                 <span className="icon">
                   <BsYoutube />
                 </span>
-              </Link>
+              </ExternalLink>
             </div>
           </div>
           <div className="footer-copyright">

@@ -2,7 +2,12 @@ import React from "react";
 import { connect } from "react-redux";
 import jwt_decode from "jwt-decode";
 import { authenticateUser } from "../actions/auth";
-
+import {
+  umeedimg,
+  independenceimg,
+  Repulicimg,
+  Christmasimg,
+} from "../Imageapi/Gallayapi";
 import {
   BrowserRouter as Router,
   Link,
@@ -11,7 +16,17 @@ import {
   Navigate,
   Outlet,
 } from "react-router-dom";
-import { Home, Login, About, Studenterp, Acedemics, Educator, Admin } from "./";
+import {
+  Home,
+  Login,
+  About,
+  Studenterp,
+  Acedemics,
+  Educator,
+  Admin,
+  Umeedday,
+  Contact,
+} from "./";
 import {
   Adminsidebar,
   Ragistratonf,
@@ -83,6 +98,7 @@ class App extends React.Component {
               element={<Acedemics />}
             />
             <Route exact={true} path="/about" element={<About />} />
+            <Route exact={true} path="/contact" element={<Contact />} />
 
             <Route
               path="/student-info"
@@ -95,9 +111,44 @@ class App extends React.Component {
                 }
               />
             </Route>
-            <Route path="/admin" element={<Admin />}>
-              <Route path="Ragister" />
-            </Route>
+            <Route
+              path="/admin/Ragister"
+              element={<Admin myComponent={Ragistratonf} />}
+            />
+            <Route
+              path="/admin/addteacher"
+              element={<Admin myComponent={AddTeacher} />}
+            />
+            <Route
+              path="/admin/addstudent"
+              element={<Admin myComponent={StudentRagistraton} />}
+            />
+            <Route
+              path="/admin/postnotification"
+              element={<Admin myComponent={PostNotification} />}
+            />
+            <Route
+              path="/admin/studentcontent"
+              element={<Admin myComponent={StudentweeklyMaterial} />}
+            />
+            <Route
+              path="/umeedday"
+              element={<Umeedday images={umeedimg} title="Umeedday" />}
+            />
+            <Route
+              path="/independenceday"
+              element={
+                <Umeedday images={independenceimg} title="Independence Day" />
+              }
+            />
+            <Route
+              path="/republicday"
+              element={<Umeedday images={Repulicimg} title="Republic Day" />}
+            />
+            <Route
+              path="/christmasday"
+              element={<Umeedday images={Christmasimg} title="Chrismas Day" />}
+            />
           </Routes>
         </Router>
       </div>

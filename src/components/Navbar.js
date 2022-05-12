@@ -61,7 +61,7 @@ class NavBar extends Component {
               <span>Login</span>
             </Link>
             <ul className="expanded">
-              <Link to="/admin">
+              <Link to="/admin/Ragister">
                 <li className="expanded-item">Administrator</li>
               </Link>
               <Link to="/educator/umeed">
@@ -124,16 +124,16 @@ class NavBar extends Component {
               <span>Gallery</span>
             </Link>
             <ul className="expanded">
-              <Link to="/about">
+              <Link to="/umeedday">
                 <li className="expanded-item">Umeed Day</li>
               </Link>
-              <Link to="/about">
+              <Link to="/independenceday">
                 <li className="expanded-item">15 August</li>
               </Link>
-              <Link to="/about">
+              <Link to="/republicday">
                 <li className="expanded-item">26 January</li>
               </Link>
-              <Link to="/about">
+              <Link to="/christmasday">
                 <li className="expanded-item">25 December</li>
               </Link>
             </ul>
@@ -169,7 +169,7 @@ class NavBar extends Component {
             </Link>
           </li>
           <li className="leaf">
-            <Link to="/about">
+            <Link to="/contact">
               <span className="icon">
                 <HiOutlineMail />
               </span>

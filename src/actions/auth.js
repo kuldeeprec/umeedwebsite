@@ -5,6 +5,9 @@ import {
   AUTHENTICATE_USER,
   LOG_OUT,
   CLEAR_AUTH_STATE,
+  RAGISTER_SUCCESS,
+  RAGISTER_START,
+  RAGISTER_FAILED,
 } from "./actionTypes";
 import { APIUrls } from "../helpers/urls";
 import { getFormBody } from "../helpers/utils";
@@ -69,5 +72,51 @@ export function logoutUser() {
 export function clearAuthState() {
   return {
     type: CLEAR_AUTH_STATE,
+  };
+}
+
+// ragister User
+export function startRagisterUser() {
+  return {
+    type: RAGISTER_START,
+  };
+}
+export function RagisterUserFailed(errorMessage) {
+  console.log(errorMessage);
+  return {
+    type: RAGISTER_FAILED,
+    error: errorMessage,
+  };
+}
+
+export function RagisterUserSuccess(Message) {
+  return {
+    type: RAGISTER_SUCCESS,
+    error: Message,
+  };
+}
+
+export function RagisterUser(name, userId, password, confirm_password) {
+  console.log(name, userId, password, confirm_password);
+  console.log(getFormBody({ name, userId, password, confirm_password }));
+  return (dispatch) => {
+    dispatch(startRagisterUser());
+    const url = APIUrls.signup();
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: getFormBody({ name, userId, password, confirm_password }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          // dispatch action to save user
+          dispatch(RagisterUserSuccess(data.message));
+          return;
+        }
+        dispatch(RagisterUserFailed(data.message));
+      });
   };
 }

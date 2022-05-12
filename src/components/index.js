@@ -2,6 +2,7 @@ import NavBar from "./Navbar";
 import Noticebar from "./Noticebar";
 import Slider from "./Slider/Slider";
 import Newscrousel from "./elasticcrousel/Newscrousel";
+import Achievercrousel from "./elasticcrousel/Achievercrousel";
 import Footer from "./Footer";
 import Login from "./Login";
 import Home from "./Home";
@@ -18,6 +19,9 @@ import StudentRagistraton from "./StudentRagistraton";
 import AddTeacher from "./AddTeacher";
 import PostNotification from "./PostNotification";
 import StudentweeklyMaterial from "./StudentweeklyMaterial";
+import Achiever from "./Achiever";
+import Umeedday from "./Umeedday";
+import Contact from "./Contact";
 export {
   NavBar,
   Noticebar,
@@ -39,4 +43,8 @@ export {
   AddTeacher,
   PostNotification,
   StudentweeklyMaterial,
+  Achiever,
+  Achievercrousel,
+  Umeedday,
+  Contact,
 };
