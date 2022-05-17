@@ -28,7 +28,7 @@ class Aboutumeed extends Component {
           <div class="box-container">
             <div class="bcard-container">
               <div class="card">
-                <img src="imgs/Director..png" alt="Avatar" />
+                <img src="Imgs/Director..png" alt="Avatar" />
               </div>
               <div class="about-card-container">
                 <p class="about-card-container-title">
@@ -40,7 +40,7 @@ class Aboutumeed extends Component {
             </div>
             <div class="bcard-container">
               <div class="card">
-                <img src="imgs/mentor.png" alt="Avatar" />
+                <img src="Imgs/mentor.png" alt="Avatar" />
               </div>
               <div class="about-card-container">
                 <p class="about-card-container-title">

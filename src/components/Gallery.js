@@ -14,7 +14,7 @@ class Gallery extends Component {
           </p>
           <div class="box-container">
             <div class="box">
-              <img src="imgs/studentact1.jpg" alt="" />
+              <img src="Imgs/studentact1.jpg" alt="" />
               <h3>
                 students musical chair dance <br />
               </h3>
@@ -23,7 +23,7 @@ class Gallery extends Component {
               </a>
             </div>
             <div class="box">
-              <img src="imgs/imgr1.jpg" alt="" />
+              <img src="Imgs/imgr1.jpg" alt="" />
               <h3>
                 students in smart class <br />
               </h3>
@@ -32,7 +32,7 @@ class Gallery extends Component {
               </a>
             </div>
             <div class="box">
-              <img src="imgs/studentact2.jpg" alt="" />
+              <img src="Imgs/studentact2.jpg" alt="" />
               <h3>
                 children day
                 <br />
