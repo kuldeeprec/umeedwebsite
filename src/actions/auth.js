@@ -30,7 +30,6 @@ export function loginSuccess(user) {
     user,
   };
 }
-
 export function login(userId, password) {
   return (dispatch) => {
     dispatch(startLogin());
