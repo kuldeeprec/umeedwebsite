@@ -49,17 +49,18 @@
   margin-left: 2%;
   font-size: 1.2rem;
   position: relative;
+  margin-bottom: 1rem;
 }
-.leaf:hover {
-  color: #c6d042;
+.leaf :hover {
+  color: red;
 }
 
 li {
   list-style-type: none;
 }
 .leaf .icon {
-  margin-right: 0.4%;
-  margin-bottom: 0.5rem;
+  margin-right: 0.2%;
+  margin-bottom: 0.2rem;
   font-size: 1.4rem;
 }
 a {
@@ -100,4 +101,39 @@ a {
 .expanded-item:hover {
   cursor: pointer;
   background-color: red;
+}
+@media only screen and (max-width: 768px) {
+  .u-name {
+    font-size: 1rem;
+  }
+  .c-logo {
+    width: 4rem;
+  }
+  .logo-display {
+    width: 5rem;
+  }
+  .navbar-header {
+    display: none;
+  }
+}
+@media only screen and (max-width: 595px) {
+  .u-name {
+    font-size: 10px;
+  }
+
+  .logo-display {
+    width: 4rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .leaf {
+    font-size: 0.8rem;
+    margin-left: 1%;
+    margin-top: 0%;
+  }
+  .leaf .icon {
+    margin-right: 0.1%;
+    margin-top: 0.1rem;
+    font-size: 1rem;
+  }
 }

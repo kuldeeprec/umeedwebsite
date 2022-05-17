@@ -71,7 +71,7 @@
   width: 100%;
   object-fit: fill !important;
   object-position: center !important;
-  opacity: 0.8;
+  opacity: 1.8;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
 }

@@ -10,10 +10,10 @@
   min-height: 100vh;
 }
 .containera {
-  width: 80%;
+  width: 100%;
   display: block;
   margin: auto;
-  padding-top: 50px;
+
   padding-bottom: 50px;
   display: flex;
   flex-direction: row;
@@ -29,12 +29,12 @@
   float: left;
   width: 55%;
 }
-.image-sectiona {
+/* .image-sectiona {
   width: 100%;
   position: relative;
   text-align: center;
   color: rgb(14, 1, 1);
-}
+} */
 .image-sectiona img {
   width: 100%;
   height: auto;
@@ -78,31 +78,34 @@
   height: 230px;
   width: 200px;
   border-radius: 7px;
-  border: 5px solid #73ad21;
-  padding: 3%;
+  border: 5px solid rgb(166, 23, 213);
+  padding: 2%;
+  background-color: rgb(166, 23, 213);
 }
 .diva2 {
   margin: 3px;
   width: 200px;
   height: 230px;
-  border: 5px solid #eb0f0f;
+  border: 5px solid rgb(47, 9, 118);
   border-radius: 7px;
-  padding: 3%;
+  padding: 2%;
+  background-color: rgb(47, 9, 118);
 }
 .diva3 {
   margin: 3px;
   height: 230px;
   width: 200px;
   border-radius: 7px;
-  border: 5px solid #73ad21;
-  padding: 3%;
+  border: 5px solid rgb(195, 30, 30);
+  padding: 2%;
+  background-color: rgb(195, 30, 30);
 }
 .diva1 h3 {
   font-family: cursive;
   font-size: larger;
   font-style: oblique;
   color: aqua;
-  margin: 2px;
+  margin: 1px;
 }
 .diva2 h3 {
   font-family: cursive;
@@ -115,7 +118,7 @@
   font-size: 90%;
   font-style: oblique;
   color: aqua;
-  margin: 2px;
+  margin: 1px;
 }
 .centered1 {
   position: absolute;
@@ -188,4 +191,40 @@
   border-radius: 2px;
   border-color: rgb(14, 0, 0);
   font-weight: bold;
+}
+
+/* added by kuldeep yadav */
+.about-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-gap: 1rem;
+  row-gap: 1rem;
+  column-gap: 3rem;
+  grid-auto-rows: minmax(1fr, auto);
+  grid-auto-columns: minmax(1fr, auto);
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.about-grid-container {
+  object-fit: contain;
+}
+.about-grid-item > h2 {
+  color: red;
+}
+.image-sectiona {
+  background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.5) 30%,
+      rgba(0, 0, 0, 0.5) 30%
+    ),
+    url(../../public/assets/img/Screenshot\ 2022-02-22\ 114623.png);
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  height: 89.5vh;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  top: 0rem;
+  z-index: -1;
 }

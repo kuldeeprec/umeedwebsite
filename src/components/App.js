@@ -26,6 +26,7 @@ import {
   Admin,
   Umeedday,
   Contact,
+  Donation,
 } from "./";
 import {
   Adminsidebar,
@@ -97,8 +98,36 @@ class App extends React.Component {
               path="/academics/class9"
               element={<Acedemics />}
             />
+            <Route
+              exact={true}
+              path="/academics/class10"
+              element={<Acedemics />}
+            />
+            <Route
+              exact={true}
+              path="/academics/class11"
+              element={<Acedemics />}
+            />
+            <Route
+              exact={true}
+              path="/academics/class12"
+              element={<Acedemics />}
+            />
+            <Route exact={true} path="/academics/JNV" element={<Acedemics />} />
+            <Route exact={true} path="/academics/CHS" element={<Acedemics />} />
+            <Route
+              exact={true}
+              path="/academics/jeemain"
+              element={<Acedemics />}
+            />
+            <Route
+              exact={true}
+              path="/academics/polytechnic"
+              element={<Acedemics />}
+            />
             <Route exact={true} path="/about" element={<About />} />
             <Route exact={true} path="/contact" element={<Contact />} />
+            <Route exact={true} path="/umeed/donation" element={<Donation />} />
 
             <Route
               path="/student-info"

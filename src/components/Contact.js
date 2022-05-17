@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "./Contact.css";
-import { NavBar, Footer } from "./";
+import { NavBar, Footer, Googlemap } from "./";
 import { HiOutlineMail } from "react-icons/hi";
+
 class Contact extends Component {
   render() {
     return (
@@ -41,6 +42,7 @@ class Contact extends Component {
             </div>
           </div>
         </div>
+        <Googlemap />
         <Footer />
       </>
     );

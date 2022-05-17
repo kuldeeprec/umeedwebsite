@@ -1,5 +1,5 @@
 .educator-table-div {
-  /* overflow-x: auto; */
+  overflow-x: auto;
 }
 .educator-table {
   border-collapse: collapse;
@@ -16,4 +16,14 @@
 }
 .educator-table tr {
   line-height: 30px;
+}
+@media only screen and (max-width: 450px) {
+  .educator-table-display {
+    font-size: 0.7rem;
+  }
+
+  .educator-table td {
+    font-size: 0.7rem;
+    padding: 0px;
+  }
 }

@@ -14,9 +14,9 @@ class Gallery extends Component {
           </p>
           <div class="box-container">
             <div class="box">
-              <img src="imgs/imgr1.jpg" alt="" />
+              <img src="imgs/studentact1.jpg" alt="" />
               <h3>
-                students in smart class <br />
+                students musical chair dance <br />
               </h3>
               <a href="#" class="btn">
                 <i class="fas fa-chevron-right"></i>
@@ -32,9 +32,9 @@ class Gallery extends Component {
               </a>
             </div>
             <div class="box">
-              <img src="imgs/imgr1.jpg" alt="" />
+              <img src="imgs/studentact2.jpg" alt="" />
               <h3>
-                students in smart class
+                children day
                 <br />
               </h3>
               <a href="#" class="btn">

@@ -40,10 +40,11 @@
   width: 100%;
   position: relative;
   height: 100%;
+
   bottom: 0;
   left: 0%;
-  will-change: transform;
-  animation: marquee 5s linear infinite;
+
+  transform: ease-in-out;
   padding-bottom: 0%;
   overflow: hidden;
 }
@@ -52,12 +53,18 @@
   animation-play-state: paused;
 }
 .card-list {
+  margin-left: 10%;
+  animation: marquee 1s linear infinite;
+  will-change: transform;
+  width: 80%;
   position: relative;
   display: block;
-  padding: 0.75rem 1.25rem;
+  padding: 0.5rem 0.5rem;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.125);
   overflow: hidden;
+  margin-bottom: 1rem;
+  border-radius: 2rem;
 }
 .card-list a {
   color: black;
@@ -74,16 +81,16 @@
 
 /* Respect user preferences about animations */
 
-@media (prefers-reduced-motion: reduce) {
+/* @media (prefers-reduced-motion: reduce) {
   .card-list {
     animation-iteration-count: 1;
     animation-duration: 0.01;
     /* instead of animation: none, so an animationend event is 
        * still available, if previously attached.
        */
-    width: auto;
+/*  width: auto;
   }
-}
+} */
 .cardnews {
   margin: 4% 3%;
   width: 50%;
@@ -98,4 +105,16 @@
 }
 .cardnews-main {
   margin-top: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .Noticebar {
+    flex-direction: column;
+    height: auto;
+  }
+  .cardnews {
+    width: 100%;
+  }
+  .cardnotice {
+    width: 100%;
+  }
 }

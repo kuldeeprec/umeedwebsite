@@ -10,7 +10,7 @@ const initialAuthState = {
   error: null,
   inProgress: false,
   iseducator: false,
-  batch: 2023,
+  batch: 2024,
 };
 export default function educator(state = initialAuthState, action) {
   switch (action.type) {
@@ -19,7 +19,7 @@ export default function educator(state = initialAuthState, action) {
         ...state,
         iseducator: false,
         educator: [],
-        batch: 2023,
+        batch: 2024,
         error: null,
       };
     case FETCH_START:

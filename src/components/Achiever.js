@@ -6,7 +6,7 @@ class Achiever extends Component {
     return (
       <div>
         <div className="Achiever-Header">
-          <h2>Our Achievers</h2>
+          <h2>Selected Student</h2>
         </div>
         <div className="Achiever-main-containt">
           <Achievercrousel />

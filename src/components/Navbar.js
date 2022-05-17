@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { RiAdminFill } from "react-icons/ri";
 import { HiOutlineAcademicCap, HiOutlineMail } from "react-icons/hi";
 import { FaServicestack } from "react-icons/fa";
+
 // import { GrGallery } from "react-icons/gr";
 import { MdPermMedia } from "react-icons/md";
 
@@ -50,7 +51,15 @@ class NavBar extends Component {
                 <BiHomeCircle />
               </span>
 
-              <span>home</span>
+              <span>Home</span>
+            </Link>
+          </li>
+          <li className="leaf">
+            <Link to="/educator/umeed">
+              <span className="icon">
+                <HiOutlineAcademicCap />
+              </span>
+              <span>Educator</span>
             </Link>
           </li>
           <li className="leaf">
@@ -62,11 +71,9 @@ class NavBar extends Component {
             </Link>
             <ul className="expanded">
               <Link to="/admin/Ragister">
-                <li className="expanded-item">Administrator</li>
+                <li className="expanded-item">Admin</li>
               </Link>
-              <Link to="/educator/umeed">
-                <li className="expanded-item">Educator</li>
-              </Link>
+
               <Link to="/login">
                 <li className="expanded-item">Student</li>
               </Link>
@@ -83,35 +90,35 @@ class NavBar extends Component {
               <Link to="/academics/class9">
                 <li className="expanded-item">Class 9</li>
               </Link>
-              <Link to="/academics/class9">
+              <Link to="/academics/class10">
                 <li className="expanded-item">Class 10</li>
               </Link>
-              <Link to="/academics/class9">
+              <Link to="/academics/class11">
                 <li className="expanded-item">Class 11</li>
               </Link>
-              <Link to="/academics/class9">
+              <Link to="/academics/class12">
                 <li className="expanded-item">Class 12</li>
               </Link>
             </ul>
           </li>
           <li className="leaf">
-            <Link to="/about">
+            <Link to="/academics/class12">
               <span className="icon">
                 <FaServicestack />
               </span>
               <span>Facilites</span>
             </Link>
             <ul className="expanded">
-              <Link to="/about">
+              <Link to="/academics/jeemain">
                 <li className="expanded-item">Jee main</li>
               </Link>
-              <Link to="/about">
+              <Link to="/academics/JNV">
                 <li className="expanded-item">Navoda</li>
               </Link>
-              <Link to="/about">
+              <Link to="/academics/CHS">
                 <li className="expanded-item">CHS</li>
               </Link>
-              <Link to="/about">
+              <Link to="/academics/polytechnic">
                 <li className="expanded-item">Polytechnic</li>
               </Link>
             </ul>
@@ -138,30 +145,9 @@ class NavBar extends Component {
               </Link>
             </ul>
           </li>
+
           <li className="leaf">
-            <Link to="/about">
-              <span className="icon">
-                <GiNewspaper />
-              </span>
-              <span>Media</span>
-            </Link>
-            <ul className="expanded">
-              <Link to="/about">
-                <li className="expanded-item">fist</li>
-              </Link>
-              <Link to="/about">
-                <li className="expanded-item">second</li>
-              </Link>
-              <Link to="/about">
-                <li className="expanded-item">third</li>
-              </Link>
-              <Link to="/">
-                <li className="expanded-item">forth</li>
-              </Link>
-            </ul>
-          </li>
-          <li className="leaf">
-            <Link to="/about">
+            <Link to="/umeed/donation">
               <span className="icon">
                 <BiDonateHeart />
               </span>
@@ -173,7 +159,7 @@ class NavBar extends Component {
               <span className="icon">
                 <HiOutlineMail />
               </span>
-              <span>ConntactUs</span>
+              <span>ContactUs</span>
             </Link>
           </li>
           <li className="leaf">

@@ -24,7 +24,6 @@ class Educator extends Component {
     console.log(batch);
     return (
       <>
-        {" "}
         <NavBar />
         <div>
           <div>
@@ -58,9 +57,14 @@ class Educator extends Component {
                         </Link>
                       </td>
                       <td>
+                        {" "}
                         {e.name} <br /> Email: {e.email}
+                        <br />
+                        Certificate-ID: {e.certificateid}
                       </td>
-                      <td>{e.about}</td>
+                      <td>
+                        <span>{e.about}</span>
+                      </td>
                     </tr>
                   );
                 })}
@@ -98,7 +102,12 @@ class Educator extends Component {
                         </Link>
                       </td>
                       <td>
-                        {e.name} <br /> Email: {e.email}
+                        <p>
+                          {" "}
+                          {e.name} <br /> Email: {e.email}
+                          <br />
+                          Certificate-ID: {e.certificateid}
+                        </p>
                       </td>
                       <td>{e.about}</td>
                     </tr>
@@ -139,6 +148,8 @@ class Educator extends Component {
                       </td>
                       <td>
                         {e.name} <br /> Email: {e.email}
+                        <br />
+                        Certificate-ID: {e.certificateid}
                       </td>
                       <td>{e.about}</td>
                     </tr>
@@ -179,6 +190,8 @@ class Educator extends Component {
                       </td>
                       <td>
                         {e.name} <br /> Email: {e.email}
+                        <br />
+                        Certificate-ID: {e.certificateid}
                       </td>
                       <td>{e.about}</td>
                     </tr>
@@ -218,9 +231,13 @@ class Educator extends Component {
                         </Link>
                       </td>
                       <td>
-                        {e.name} <br /> Email: {e.email}
+                        <span>
+                          {e.name} <br /> Email: {e.email}
+                        </span>
                       </td>
-                      <td>{e.about}</td>
+                      <td>
+                        <span>{e.about} </span>
+                      </td>
                     </tr>
                   );
                 })}

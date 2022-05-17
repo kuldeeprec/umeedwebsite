@@ -22,6 +22,8 @@ import StudentweeklyMaterial from "./StudentweeklyMaterial";
 import Achiever from "./Achiever";
 import Umeedday from "./Umeedday";
 import Contact from "./Contact";
+import Googlemap from "./Googlemap";
+import Donation from "./Donation";
 export {
   NavBar,
   Noticebar,
@@ -47,4 +49,6 @@ export {
   Achievercrousel,
   Umeedday,
   Contact,
+  Googlemap,
+  Donation,
 };

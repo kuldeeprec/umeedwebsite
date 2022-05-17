@@ -1,5 +1,5 @@
 const umeedimg = [
-  { id: 1, src: "./assets/img/Screenshot 2022-02-22 114541.png" },
+  { id: 1, src: "./assets/img/img1.jpg" },
   { id: 2, src: "./assets/img/Screenshot 2022-02-22 114541.png" },
   { id: 3, src: "./assets/img/Screenshot 2022-02-22 114541.png" },
   { id: 4, src: "./assets/img/Screenshot 2022-02-22 114541.png" },

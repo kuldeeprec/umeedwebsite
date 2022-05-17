@@ -40,7 +40,7 @@ class Aboutumeed extends Component {
             </div>
             <div class="bcard-container">
               <div class="card">
-                <img src="imgs/headofumeed.jpg" alt="Avatar" />
+                <img src="imgs/mentor.png" alt="Avatar" />
               </div>
               <div class="about-card-container">
                 <p class="about-card-container-title">

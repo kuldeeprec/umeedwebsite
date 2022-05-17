@@ -14,20 +14,20 @@ class Footer extends Component {
           <div className="footer-main">
             <div className="footer-content left">
               <h3>Umeed Rajkiya Engineering College Sonbhadra</h3>
-              <div className="address">
+              <div className="address address-size">
                 <span className="icon">
                   <ImLocation2 />
                 </span>
                 Umeed Rajkiya Engineering College <br />
                 &nbsp;&nbsp;&nbsp;&nbsp;churk Sonbhadra 231206
               </div>
-              <div className="address">
+              <div className="address address-size">
                 <span className="icon">
                   <IoMdCall />
                 </span>
                 7317761049
               </div>
-              <div className="address">
+              <div className="address address-size">
                 <span className="icon">
                   <GrMail />
                 </span>
@@ -35,7 +35,7 @@ class Footer extends Component {
               </div>
             </div>
             <div className="footer-content link">
-              <h2>FollowUs</h2>
+              <h3>FollowUs</h3>
               <ExternalLink href="https://www.facebook.com/umeedrecsonbhadra/">
                 <span className="icon">
                   <BsFacebook />
@@ -58,7 +58,7 @@ class Footer extends Component {
               </ExternalLink>
             </div>
           </div>
-          <div className="footer-copyright">
+          <div className="footer-copyright address-size">
             © Copyright Umeed, Designed and Maintained UmeedTeam. <br />
             All rights reserved | Terms & Conditions | Privacy Policy |
           </div>

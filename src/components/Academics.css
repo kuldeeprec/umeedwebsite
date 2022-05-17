@@ -2,6 +2,10 @@
 h2 {
   text-align: center;
 }
+.Academic-container {
+  display: flex;
+  flex-direction: row;
+}
 .Academic-container li {
   margin-bottom: 1rem;
 }
@@ -63,16 +67,9 @@ a:hover {
 a:link {
   text-decoration: none;
 } */
-@media (max-width: 600px) {
-  .physics {
-    width: 100%;
-  }
-  .chemistry {
-    width: 100%;
-  }
-  .mathematics {
-    width: 100%;
-  }
+.academics-link {
+  text-align: center;
+  object-position: center;
 }
 .physics-p1 {
   width: 100%;
@@ -83,6 +80,9 @@ a:link {
   height: 85%;
   border-radius: 25px;
   overflow-y: scroll;
+}
+.scrollbaracademics {
+  text-align: center;
 }
 .scrollbaracademics::-webkit-scrollbar {
   display: block;
@@ -129,13 +129,28 @@ a:link {
   border-radius: 25px;
   overflow-y: scroll;
 }
-.thismonth-t1 {
-  width: 100%;
-  height: 10%;
-}
-.thismonth-t2 {
-  width: 100%;
-  height: 85%;
-  border-radius: 25px;
-  overflow-y: scroll;
+
+@media screen and (max-width: 768px) {
+  .Academic-container {
+    flex-direction: column;
+  }
+  .physics {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+  .chemistry {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+  .mathematics {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+  .academics h1,
+  h2 {
+    font-size: 1rem;
+  }
 }
