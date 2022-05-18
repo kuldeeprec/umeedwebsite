@@ -102,6 +102,29 @@ a {
   cursor: pointer;
   background-color: red;
 }
+.close-open-size {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  margin-bottom: 0;
+}
+
+.close-open {
+  color: white;
+  padding: 0px 0px;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  height: 2rem;
+}
+.mobile-nav {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .mobile-nav {
+    display: block;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .u-name {
     font-size: 1rem;

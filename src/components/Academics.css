@@ -133,6 +133,7 @@ a:link {
 @media screen and (max-width: 768px) {
   .Academic-container {
     flex-direction: column;
+    margin: 2rem;
   }
   .physics {
     width: 100%;
@@ -152,5 +153,11 @@ a:link {
   .academics h1,
   h2 {
     font-size: 1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .Academic-container {
+    flex-direction: column;
+    margin: 1rem;
   }
 }

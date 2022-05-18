@@ -24,6 +24,7 @@ import Umeedday from "./Umeedday";
 import Contact from "./Contact";
 import Googlemap from "./Googlemap";
 import Donation from "./Donation";
+import Sidebar from "./Sidebar";
 export {
   NavBar,
   Noticebar,
@@ -51,4 +52,5 @@ export {
   Contact,
   Googlemap,
   Donation,
+  Sidebar,
 };

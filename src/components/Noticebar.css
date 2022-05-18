@@ -58,9 +58,10 @@
   will-change: transform;
   width: 80%;
   position: relative;
+  text-align: center;
   display: block;
   padding: 0.5rem 0.5rem;
-  background-color: #fff;
+  background-color: rgb(232, 212, 212);
   border: 1px solid rgba(0, 0, 0, 0.125);
   overflow: hidden;
   margin-bottom: 1rem;
@@ -116,5 +117,14 @@
   }
   .cardnotice {
     width: 100%;
+  }
+  .card-list {
+    margin-left: 10%;
+    padding: 0.1rem 0.1rem;
+
+    margin-bottom: 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.7rem;
+    text-align: center;
   }
 }

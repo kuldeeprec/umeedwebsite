@@ -39,15 +39,6 @@ class Noticebar extends Component {
                 <li className="card-list">
                   <a href="/">lorem ipsum dolor sit amet, consectetur adip</a>
                 </li>
-                <li className="card-list">
-                  <a href="/">lorem ipsum dolor sit amet, consectetur adip</a>
-                </li>
-                <li className="card-list">
-                  <a href="/">lorem ipsum dolor sit amet, consectetur adip</a>
-                </li>
-                <li className="card-list">
-                  <a href="/">lorem ipsum dolor sit amet, consectetur adip</a>
-                </li>
               </ul>
             </div>
           </div>

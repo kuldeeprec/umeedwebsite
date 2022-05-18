@@ -56,7 +56,7 @@ header img {
   background-position: center;
   background-size: cover;
   opacity: 0.9;
-  height: 89.5vh;
+
   height: 100vh;
   display: flex;
   position: relative;
@@ -249,7 +249,8 @@ header img {
   .donate-section {
     display: flex;
     flex-direction: column;
-    height: 140vh;
+    height: 100vh;
+    object-fit: fill;
   }
   .donate-text {
     width: 90%;

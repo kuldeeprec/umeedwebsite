@@ -95,7 +95,7 @@ class Educator extends Component {
                           <img
                             className="logo-display"
                             src={
-                              process.env.PUBLIC_URL + `/educator/${e.avatar}`
+                              process.env.PUBLIC_URL + `/Educator/${e.avatar}`
                             }
                             alt="logo is not display"
                           />
@@ -140,7 +140,7 @@ class Educator extends Component {
                           <img
                             className="logo-display"
                             src={
-                              process.env.PUBLIC_URL + `/educator/${e.avatar}`
+                              process.env.PUBLIC_URL + `/Educator/${e.avatar}`
                             }
                             alt="logo is not display"
                           />
@@ -182,7 +182,7 @@ class Educator extends Component {
                           <img
                             className="logo-display"
                             src={
-                              process.env.PUBLIC_URL + `/educator/${e.avatar}`
+                              process.env.PUBLIC_URL + `/Educator/${e.avatar}`
                             }
                             alt="logo is not display"
                           />
@@ -224,7 +224,7 @@ class Educator extends Component {
                           <img
                             className="logo-display"
                             src={
-                              process.env.PUBLIC_URL + `/educator/${e.avatar}`
+                              process.env.PUBLIC_URL + `/Educator/${e.avatar}`
                             }
                             alt="logo is not display"
                           />

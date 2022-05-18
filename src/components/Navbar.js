@@ -7,16 +7,28 @@ import { Link } from "react-router-dom";
 import { RiAdminFill } from "react-icons/ri";
 import { HiOutlineAcademicCap, HiOutlineMail } from "react-icons/hi";
 import { FaServicestack } from "react-icons/fa";
-
+import { VscThreeBars } from "react-icons/vsc";
+import { IoMdCloseCircle } from "react-icons/io";
 // import { GrGallery } from "react-icons/gr";
 import { MdPermMedia } from "react-icons/md";
 
-import { GiNewspaper } from "react-icons/gi";
+import { Sidebar } from "./";
 
 class NavBar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      menucollapse: true,
+    };
+  }
+  menuIconClick = () => {
+    this.setState({ menucollapse: !this.state.menucollapse });
+  };
   render() {
+    const { menucollapse } = this.state;
     return (
       <>
+        <Sidebar menucollable={menucollapse} />
         <div className="header">
           <div className="u-logo-and-u-name">
             <Link to="/" className="logo-display">
@@ -63,14 +75,14 @@ class NavBar extends Component {
             </Link>
           </li>
           <li className="leaf">
-            <Link to="/about">
+            <Link to="/">
               <span className="icon">
                 <RiAdminFill />
               </span>
               <span>Login</span>
             </Link>
             <ul className="expanded">
-              <Link to="/admin/Ragister">
+              <Link to="/">
                 <li className="expanded-item">Admin</li>
               </Link>
 
@@ -80,7 +92,7 @@ class NavBar extends Component {
             </ul>
           </li>
           <li className="leaf">
-            <Link to="/about">
+            <Link to="/">
               <span className="icon">
                 <HiOutlineAcademicCap />
               </span>
@@ -102,7 +114,7 @@ class NavBar extends Component {
             </ul>
           </li>
           <li className="leaf">
-            <Link to="/academics/class12">
+            <Link to="/">
               <span className="icon">
                 <FaServicestack />
               </span>
@@ -124,7 +136,7 @@ class NavBar extends Component {
             </ul>
           </li>
           <li className="leaf">
-            <Link to="/about">
+            <Link to="/">
               <span className="icon">
                 <MdPermMedia />
               </span>
@@ -170,6 +182,29 @@ class NavBar extends Component {
               <span>AboutUs</span>
             </Link>
           </li>
+        </div>
+        <div className="mobile-nav">
+          {menucollapse ? (
+            <button
+              style={{ backgroundColor: "black" }}
+              className="close-open"
+              onClick={this.menuIconClick}
+            >
+              <span className="close-open-size">
+                <VscThreeBars />
+              </span>
+            </button>
+          ) : (
+            <button
+              style={{ backgroundColor: "black" }}
+              className="close-open"
+              onClick={this.menuIconClick}
+            >
+              <span className="close-open-size">
+                <IoMdCloseCircle />
+              </span>
+            </button>
+          )}
         </div>
       </>
     );
