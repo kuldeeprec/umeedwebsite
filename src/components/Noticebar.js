@@ -11,7 +11,7 @@ class Noticebar extends Component {
           </div>
           <div className="cardnotice-main">
             <div className="card-marque">
-              <ul className="card-container">
+              <ul className="card-container" type="circle">
                 <li className="card-list">
                   <a href="/">lorem ipsum dolor sit amet, consectetur adip</a>
                 </li>

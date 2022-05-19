@@ -66,5 +66,41 @@ th {
   margin-right: 30px;
 }
 .profile-photo {
-  margin-left: 4rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.print-page {
+  text-align: center;
+}
+.print-page span {
+  border-radius: solid black 2rem;
+  padding: 0.7rem;
+  background-color: rgb(227, 20, 20);
+  font-weight: bold;
+  color: white;
+}
+@media only screen and (max-width: 480px) {
+  .title2 {
+    margin-left: 2rem;
+  }
+  .table2 {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+  }
+  .table1 {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+  }
+  .table1 td {
+    font-size: 0.9rem;
+  }
+  .title2 h3 {
+    font-size: 1rem;
+  }
+  .profile-photo {
+    height: 8rem;
+    width: 5rem;
+  }
 }

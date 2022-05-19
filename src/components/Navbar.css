@@ -107,6 +107,9 @@ a {
   margin-right: 1rem;
   margin-bottom: 0;
 }
+.open-close-size {
+  text-align: right;
+}
 
 .close-open {
   color: white;
@@ -115,9 +118,13 @@ a {
   cursor: pointer;
   text-align: left;
   height: 2rem;
+  margin: 0px;
 }
 .mobile-nav {
   display: none;
+}
+.side-bar {
+  position: inherit;
 }
 @media only screen and (max-width: 768px) {
   .mobile-nav {

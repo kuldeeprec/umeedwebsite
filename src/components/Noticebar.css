@@ -54,7 +54,7 @@
 }
 .card-list {
   margin-left: 10%;
-  animation: marquee 1s linear infinite;
+
   will-change: transform;
   width: 80%;
   position: relative;
@@ -66,6 +66,7 @@
   overflow: hidden;
   margin-bottom: 1rem;
   border-radius: 2rem;
+  animation: marquee 30s linear infinite;
 }
 .card-list a {
   color: black;
@@ -73,10 +74,10 @@
 }
 @keyframes marquee {
   0% {
-    transform: translate(0, 0);
+    top: 340px;
   }
   100% {
-    transform: translate(0, -100%);
+    top: -320px;
   }
 }
 

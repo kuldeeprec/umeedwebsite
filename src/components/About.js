@@ -19,29 +19,26 @@ class About extends Component {
                   <h1>ABOUT US</h1>
                 </div>
                 <div className="content">
-                  <h3>
-                    Save the Children is India’s leading independent child
-                    rights’ NGO, which works in 18 states of the country.
-                    Beginning its journey in 2008 in India, and registered as
-                    ‘Bal Raksha Bharat’, we have changed the lives of more than
-                    11 million (1.1 crore) children.
-                  </h3>
                   <p>
-                    Save the Children is India’s leading independent child
-                    rights’ NGO, which works in 18 states of the country.
-                    Beginning its journey in 2008 in India, and registered as
-                    ‘Bal Raksha Bharat’, we have changed the lives of more than
-                    11 million (1.1 crore) children.<span id="dots">...</span>
-                    <span id="more">
-                      {" "}
-                      We firmly believe that every child deserves the best
-                      chance for a bright future, which is why, we are fiercely
-                      committed to ensure that children not only survive, but
-                      thrive. With a bold ambition and a powerful vigilance, we
-                      do whatever it takes to save the children.
-                    </span>
+                    Umeed, established in July 2017 is a registered society that
+                    provide services for children and young adults with
+                    developmental difficulties.This foundation provides quality
+                    intervention for the children while also promoting increased
+                    societal awareness and sensitivity towards their needs. The
+                    founder of Umeed is himself a student of Rajkiya engineering
+                    college sonbhadra Er.Ajit Kushwaha (Software Engineer at HCL
+                    Technologies). And this was the motivating source towards
+                    starting of Umeed as he found it very difficult to find
+                    services under one roof that would cater to the needs of her
+                    child.
                   </p>
-                  {}
+                  <p>
+                    {" "}
+                    Thus in order to fulfill this aspiration has brought
+                    together a great team of educators and behaviour therapists
+                    etc under one roof so that Umeed is able to cater to all
+                    deviant needs of our children .
+                  </p>
                 </div>
               </div>
               <div className="diva1">
@@ -62,10 +59,10 @@ class About extends Component {
             </div>
           </div>
         </div>
-        {/* <div>
+        <div>
           <div className="about-grid-container">
             <div className="about-grid-item">
-              <h2>OUR Mission</h2>
+              <h1>OUR Mission</h1>
               <p>
                 Our mission is to make this world a better place where every
                 body lives happily with harmony by caring sharing with love for
@@ -78,7 +75,7 @@ class About extends Component {
               </p>
             </div>
             <div className="about-grid-item">
-              <h2>OUR Vision</h2>
+              <h1>OUR Vision</h1>
               <p>
                 Our mission is to make this world a better place where every
                 body lives happily with harmony by caring sharing with love for
@@ -91,7 +88,7 @@ class About extends Component {
               </p>
             </div>
           </div>
-        </div> */}
+        </div>
         <Footer />
       </>
     );

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Login.css";
-import { Navigate } from "react-router-dom";
+import { Navigate, Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { login, clearAuthState } from "../actions/auth";
 class Login extends Component {
@@ -96,9 +96,12 @@ class Login extends Component {
                 </label> */}
               </div>
               <div className="container" style={{ backgroundColor: "#f1f1f1" }}>
-                <button type="button" className="cancelbtn">
-                  Cancel
-                </button>
+                <Link to="/" className="logo-display">
+                  <button type="button" className="cancelbtn">
+                    Cancel
+                  </button>
+                </Link>
+
                 <span className="psw">
                   Forgot <a href="#">password?</a>
                 </span>

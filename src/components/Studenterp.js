@@ -51,6 +51,34 @@ class Studenterp extends Component {
           <div class="title2">
             <h3>My Information</h3>
             <div class="cont2">
+              <div class="table2">
+                <table>
+                  <tr>
+                    <th>
+                      <h3>Roll NO.: {auth.user.userId}</h3>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>
+                      <h3>Enrollment NO.: </h3>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>
+                      <img
+                        className="profile-photo"
+                        src={
+                          process.env.PUBLIC_URL +
+                          `/student/${student.student.avatar}`
+                        }
+                        alt="Photograph"
+                      />
+                      <br />
+                      <p className="profile-photograph">Photograph</p>
+                    </th>
+                  </tr>
+                </table>
+              </div>
               <div class="table1">
                 <table>
                   <tr>
@@ -115,36 +143,11 @@ class Studenterp extends Component {
                   </tr>
                 </table>
               </div>
-              <div class="table2">
-                <table>
-                  <tr>
-                    <th>
-                      <h3>Roll NO.: {auth.user.userId}</h3>
-                    </th>
-                  </tr>
-                  <tr>
-                    <th>
-                      <h3>Enrollment NO.: </h3>
-                    </th>
-                  </tr>
-                  <tr>
-                    <th>
-                      <img
-                        className="profile-photo"
-                        src={
-                          process.env.PUBLIC_URL +
-                          `/student/${student.student.avatar}`
-                        }
-                        alt="Photograph"
-                      />
-                      <br />
-                      <p className="profile-photo">Photograph</p>
-                    </th>
-                  </tr>
-                </table>
-              </div>
             </div>
           </div>
+        </div>
+        <div className="print-page">
+          <span onClick={() => window.print()}>print</span>
         </div>
       </div>
     );

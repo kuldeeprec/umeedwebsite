@@ -29,6 +29,7 @@ class NavBar extends Component {
     return (
       <>
         <Sidebar menucollable={menucollapse} />
+
         <div className="header">
           <div className="u-logo-and-u-name">
             <Link to="/" className="logo-display">
@@ -200,7 +201,7 @@ class NavBar extends Component {
               className="close-open"
               onClick={this.menuIconClick}
             >
-              <span className="close-open-size">
+              <span className="close-open-size open-close-size ">
                 <IoMdCloseCircle />
               </span>
             </button>
