@@ -16,8 +16,8 @@ class Achievercrousel extends Component {
     items: [
       { id: 1, title: "/Imgs/cmp.jpg" },
       { id: 2, title: "/Imgs/cmp2.jpg" },
-      { id: 3, title: "/Imgs/cmp.jpg" },
-      { id: 4, title: "/Imgs/cmp2.jpg" },
+      { id: 3, title: "/Imgs/cmp4.jpeg" },
+      { id: 4, title: "/Imgs/cmp3.jpeg" },
     ],
   };
   render() {
